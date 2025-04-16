@@ -2,15 +2,21 @@ const toggleButton = document.querySelector('.sidebar-toggle')
 const sidebar = document.querySelector('.sidebar')
 const closeBtn = document.querySelector('.close-btn')
 
+window.addEventListener("DOMContentLoaded", function(){
+    closeBtn.classList.toggle('hide-button');
+});
+
 
 toggleButton.addEventListener('click', ()=>{
     sidebar.classList.toggle('show-sidebar')
-    toggleButton.classList.toggle('hide-button')
+    toggleButton.classList.toggle('hide-button');
+    closeBtn.classList.toggle('hide-button');
 })
 
 closeBtn.addEventListener('click', ()=>{
     sidebar.classList.remove('show-sidebar')
     toggleButton.classList.toggle('hide-button')
+    closeBtn.classList.toggle('hide-button');
 })
 
 document.addEventListener('click', (e) =>{
