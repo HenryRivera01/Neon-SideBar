@@ -109,6 +109,12 @@
         background-color: var(--black);
     }
 
+    @media (max-width: 768px) {
+        .close-btn{
+            margin-right: 2rem;
+        }
+    }
+
     .show-sidebar {
         transform: translate(0);
     }
